@@ -7,6 +7,8 @@ import Images from "./images";
 function App() {
   const [input, setInput] = useState("");
   const [response, setResponse] = useState(null);
+  const [search, setSearch] = useState(false);
+  const [word, setWord] = useState("");
 
   const handleInput = (e) => {
     setInput(e.target.value);
@@ -22,6 +24,9 @@ function App() {
       .then((data) => {
         setResponse(data);
         console.log(data);
+        setSearch(true);
+        setWord(input);
+        setInput("");
       });
   };
 
@@ -38,9 +43,9 @@ function App() {
         <button className="btn" onClick={() => getImages()}>
           Get Images
         </button>
-        <h3>{input + " " + "Images are:"} </h3>
+        <h3>{search && word + " " + "Images are:"} </h3>
       </div>
-      <Images response={response.hits} />
+      <Images response={response?.hits} />
     </div>
   );
 }

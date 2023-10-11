@@ -1,7 +1,7 @@
 function Images(props) {
   return (
     <div className="images">
-      {props.response.map((images) => (
+      {props.response?.map((images) => (
         <div key={images.id}>
           <img
             src={images.previewURL}
