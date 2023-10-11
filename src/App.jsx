@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Images from "./images";
 
 function App() {
   const [input, setInput] = useState("");
@@ -39,6 +40,7 @@ function App() {
         </button>
         <h3>{input + " " + "Images are:"} </h3>
       </div>
+      <Images response={response.hits} />
     </div>
   );
 }
