@@ -25,10 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -53,6 +49,30 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.input-container {
+  margin-top: 200px;
+}
+
+.input {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: cursive;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #1a1a1a;
+}
+.input:hover {
+  border-color: #646cff;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
 }
 
 @media (prefers-color-scheme: light) {
